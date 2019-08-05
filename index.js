@@ -1,8 +1,10 @@
-// code away!
-const server = require('./server.js');
+const express = require('express');
 
-const port = 8000;
+const server = express();
 
-server.listen(port, () => {
-  console.log(`Our server is listening on port ${port}`);
+server.use(express.json());
+
+
+server.listen(4000, () => {
+  console.log('\n*** Server Running on http://localhost:4000 ***\n');
 }); 
